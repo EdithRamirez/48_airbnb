@@ -6,11 +6,12 @@
 		<title>airbnb</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"><!--estilos de bootstrap-->
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/full-slider.css">
 	</head>
 	<body>
-		<header><!--inicio de contenedor navegador-->	
-			<nav class="navbar navbar-default" role="navigation"><!--inicio de menu-->
-				<div class="container-fluid">
+		<header><!--inicio de contenedor navegador-->
+			<div class="container-fluid">
+				<nav class="navbar" role="navigation"><!--inicio de menu-->
 					<div class="navbar-header"><!--inicio menu responsive-->
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
 							<span class="sr-only">menu</span>
@@ -18,7 +19,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="navbar-brand" href="#"><img src="" alt="Logo"></a>
+						<a href="navbar-brand" href="#"><img src="img/logo.png" alt="Logo"></a>
 					</div><!--fin de menu responsive-->
 					<div class="collapse navbar-collapse" id="menu">
 						<ul class="nav navbar-nav navbar-right">
@@ -28,20 +29,75 @@
 							<li><a href="#">Iniciar sesi&oacute;n</a></li>
 						</ul>
 					</div>
+				</nav>
+				<div id="myCarousel" class="carousel slide">
+					<div class="carousel-inner"><!--inico de slider-->
+						<div class="item active"><!--inicio contenedor imagen1-->
+							<div class="fill banner1"></div><!--bg de imagen uno-->
+							<div class="carousel-caption"><!--titulo-->
+								<h2>Te espera un mundo de viajes inolvidables.</h2>
+								<p>Alojamientos, experiencias y lugares, todo en una sola aplicación.</p>
+								<button type="submit" class="btn btn-lg">Descubre las últimas novedades</button>
+							</div>
+						</div><!--fin contenedor imagen1-->
+						<div class="item"><!--inicio contenedor imagen2-->
+							<div class="fill banner2"></div><!--bg de imagen dos-->
+							<div class="carousel-caption"><!--titulo-->
+								<h2>Experiencias de Airbnb</h2>
+								<p>Conviértete en un maestro del sushi o en una leyenda del surf.</p>
+								<button type="submit" class="btn btn-lg">Descubre las últimas novedades</button>
+							</div>
+						</div><!--fin contenedor imagen2-->
+						<div class="item"><!--inicio contenedor imagen3-->
+							<div class="fill banner3"></div><!--bg de imagen tres-->
+							<div class="carousel-caption"><!--titulo-->
+								<h2>Lugares de Airbnb</h2>
+								<p>Elige una ciudad y descubre todos sus rincones junto a expertos locales como Woody.</p>
+								<button type="submit" class="btn btn-lg">Descubre las últimas novedades</button>
+							</div>
+						</div><!--fin contenedor imagen3-->
+						<div class="item"><!--inicio contenedor imagen4-->
+							<div class="fill banner4"></div><!--bg de imagen cuatro-->
+							<div class="carousel-caption"><!--titulo-->
+								<h2>En directo desde Los Ángeles</h2>
+								<p>Acompaña a Brian Chesky, nuestro director ejecutivo, en la presentación de un nuevo mundo de viajes inolvidables.</p>
+								<button type="submit" class="btn btn-lg">Ver la presentación</button>
+							</div>
+						</div><!--fin contenedor imagen4-->
+					</div><!--fin de slider-->
+					<a href="#myCarousel" class="left carousel-control">
+						<span class="icon-prev"></span>
+					</a>
+					<a href="#myCarousel" class="right carousel-control">
+						<span class="icon-next"></span>
+					</a>
 				</div>
-			</nav>
+			</div>
 		</header><!--fin de contenedor navegador-->
-		
 		<section>
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="direccion">Dónde
+							<input type="text" placeholder="Destino, ciudad, dirección">	
+						</label>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="direccion">Cuándo
+							<input type="text" placeholder="Llegada">
+							<input type="text" placeholder="Salida">	
+						</label>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="direccion">Huéspedes
+							<input type="text" placeholder="Destino, ciudad, dirección">	
+						</label>
+						<input type="submit" value="Buscar">
 					</div>
 				</div>
 			</div>
 		</section>
-		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script><!--jquery-->
+		<script type="text/javascript" src="js/jquery.min.js"></script><!--jquery-->
 		<script type="text/javascript" src="js/bootstrap.min.js"></script><!--js de bootstrap-->
 		<script type="text/javascript" src="js/main.js"></script> <!--mi codigo-->
 	</body>

@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>airbnb</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"><!--estilos de bootstrap-->
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="css/full-slider.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"><!--jquery ui para calendario-->
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/slick.css"><!--estilo de slider-->
+		<link rel="stylesheet" type="text/css" href="css/estilos.css"><!--mis estilos-->
 	</head>
 	<body>
 		<header><!--inicio de contenedor navegador-->
-			<div class="container-fluid">
-				<nav class="navbar" role="navigation"><!--inicio de menu-->
+			<nav class="navbar navbar-fixed-top" role="navigation"><!--inicio de menu-->
+				<div class="container-fluid">
 					<div class="navbar-header"><!--inicio menu responsive-->
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
 							<span class="sr-only">menu</span>
@@ -19,7 +23,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="navbar-brand" href="#"><img src="img/logo.png" alt="Logo"></a>
+						<a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo"></a>
 					</div><!--fin de menu responsive-->
 					<div class="collapse navbar-collapse" id="menu">
 						<ul class="nav navbar-nav navbar-right">
@@ -29,76 +33,358 @@
 							<li><a href="#">Iniciar sesi&oacute;n</a></li>
 						</ul>
 					</div>
-				</nav>
-				<div id="myCarousel" class="carousel slide">
-					<div class="carousel-inner"><!--inico de slider-->
-						<div class="item active"><!--inicio contenedor imagen1-->
-							<div class="fill banner1"></div><!--bg de imagen uno-->
-							<div class="carousel-caption"><!--titulo-->
-								<h2>Te espera un mundo de viajes inolvidables.</h2>
-								<p>Alojamientos, experiencias y lugares, todo en una sola aplicación.</p>
-								<button type="submit" class="btn btn-lg">Descubre las últimas novedades</button>
-							</div>
-						</div><!--fin contenedor imagen1-->
-						<div class="item"><!--inicio contenedor imagen2-->
-							<div class="fill banner2"></div><!--bg de imagen dos-->
-							<div class="carousel-caption"><!--titulo-->
-								<h2>Experiencias de Airbnb</h2>
-								<p>Conviértete en un maestro del sushi o en una leyenda del surf.</p>
-								<button type="submit" class="btn btn-lg">Descubre las últimas novedades</button>
-							</div>
-						</div><!--fin contenedor imagen2-->
-						<div class="item"><!--inicio contenedor imagen3-->
-							<div class="fill banner3"></div><!--bg de imagen tres-->
-							<div class="carousel-caption"><!--titulo-->
-								<h2>Lugares de Airbnb</h2>
-								<p>Elige una ciudad y descubre todos sus rincones junto a expertos locales como Woody.</p>
-								<button type="submit" class="btn btn-lg">Descubre las últimas novedades</button>
-							</div>
-						</div><!--fin contenedor imagen3-->
-						<div class="item"><!--inicio contenedor imagen4-->
-							<div class="fill banner4"></div><!--bg de imagen cuatro-->
-							<div class="carousel-caption"><!--titulo-->
-								<h2>En directo desde Los Ángeles</h2>
-								<p>Acompaña a Brian Chesky, nuestro director ejecutivo, en la presentación de un nuevo mundo de viajes inolvidables.</p>
-								<button type="submit" class="btn btn-lg">Ver la presentación</button>
-							</div>
-						</div><!--fin contenedor imagen4-->
-					</div><!--fin de slider-->
-					<a href="#myCarousel" class="left carousel-control">
-						<span class="icon-prev"></span>
-					</a>
-					<a href="#myCarousel" class="right carousel-control">
-						<span class="icon-next"></span>
-					</a>
 				</div>
-			</div>
+			</nav><!--fin de menu-->
+			<div id="myCarousel" class="carousel slide"><!--inico de contenedor slider-->
+				<div class="carousel-inner"><!--inicio de slider-->
+					<div class="item active"><!--inicio contenedor imagen1-->
+						<div class="fill banner1"></div><!--bg de imagen uno-->
+						<div class="carousel-caption"><!--titulo-->
+							<h2>Te espera un mundo de viajes inolvidables.</h2>
+							<p>Alojamientos, experiencias y lugares, todo en una sola aplicación.</p>
+							<button type="submit" class="btn btn-lg">Descubre las últimas novedades</button>
+						</div>
+					</div><!--fin contenedor imagen1-->
+					<div class="item"><!--inicio contenedor imagen2-->
+						<div class="fill banner2"></div><!--bg de imagen dos-->
+						<div class="carousel-caption"><!--titulo-->
+							<h2>Experiencias de Airbnb</h2>
+							<p>Conviértete en un maestro del sushi o en una leyenda del surf.</p>
+							<button type="submit" class="btn btn-lg">Descubre las últimas novedades</button>
+						</div>
+					</div><!--fin contenedor imagen2-->
+					<div class="item"><!--inicio contenedor imagen3-->
+						<div class="fill banner3"></div><!--bg de imagen tres-->
+						<div class="carousel-caption"><!--titulo-->
+							<h2>Lugares de Airbnb</h2>
+							<p>Elige una ciudad y descubre todos sus rincones junto a expertos locales como Woody.</p>
+							<button type="submit" class="btn btn-lg">Descubre las últimas novedades</button>
+						</div>
+					</div><!--fin contenedor imagen3-->
+					<div class="item"><!--inicio contenedor imagen4-->
+						<div class="fill banner4"></div><!--bg de imagen cuatro-->
+						<div class="carousel-caption"><!--titulo-->
+							<h2>En directo desde Los Ángeles</h2>
+							<p>Acompaña a Brian Chesky, nuestro director ejecutivo, en la presentación de un nuevo mundo de viajes inolvidables.</p>
+							<button type="submit" class="btn btn-lg">Ver la presentación</button>
+						</div>
+					</div><!--fin contenedor imagen4-->
+				</div><!--fin de slider-->
+				<!--controles-->
+				<a href="#myCarousel" class="left carousel-control" data-slide="prev"><span class="icon-prev"></span></a>
+				<a href="#myCarousel" class="right carousel-control" data-slide="next"><span class="icon-next"></span></a>
+			</div><!--fin de contenedor slider-->
 		</header><!--fin de contenedor navegador-->
-		<section>
+		<section><!--inicio de formulario-->
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<label for="direccion">Dónde
-							<input type="text" placeholder="Destino, ciudad, dirección">	
-						</label>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<label for="direccion">Cuándo
-							<input type="text" placeholder="Llegada">
-							<input type="text" placeholder="Salida">	
-						</label>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<label for="direccion">Huéspedes
-							<input type="text" placeholder="Destino, ciudad, dirección">	
-						</label>
-						<input type="submit" value="Buscar">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<form class="form-inline">
+							<div class="form-group">
+								<label for="direccion">Dónde</label>
+								<input type="text" placeholder="Destino, ciudad, dirección">
+							</div>
+							<div class="form-group">
+								<label for="direccion">Cuándo</label>
+								<input type="text" id="dateEntrada" placeholder="Llegada">
+								<input type="text" id="dateSalida" placeholder="Salida">	
+							</div>
+							<div class="form-group">
+								<label for="huespedes">Huéspedes</label>
+								<select name="" id="huespedes">
+									<option value="1">1 huésped</option>
+									<option value="2">2 huéspedes</option>
+									<option value="3">3 huéspedes</option>
+									<option value="4">4 huéspedes</option>
+									<option value="5">5 huéspedes</option>
+									<option value="6">6 huéspedes</option>
+									<option value="7">7 huéspedes</option>
+									<option value="8">8 huéspedes</option>
+									<option value="9">9 huéspedes</option>
+									<option value="10">10 huéspedes</option>
+								</select>
+							</div>
+							<button type="submit" class="btn btn-default">Buscar</button>
+						</form>
 					</div>
 				</div>
 			</div>
-		</section>
+		</section><!--fin de formulario-->
+		<section><!--inicio de experiencias-->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h3>Experiencia</h3>
+					</div>
+				</div>
+				<div id="sliderExper" class="slider">
+					<div class="col-xs-4">
+						<img src="img/img1.png" class="img-responsive" alt="imagen de experiencia">
+						<div class="caption">
+							<p><strong>$2658 MXN </strong>Travel & culture</p>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/img2.png" class="img-responsive" alt="imagen de experiencia">
+						<div class="caption">
+							<p><strong>$6329 MXN </strong>Honey & bees experience</p>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/img3.png" class="img-responsive" alt="imagen de experiencia">
+						<div class="caption">
+							<p><strong>$1050 MXN </strong>Culture & tradition</p>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/img4.png" class="img-responsive" alt="imagen de experiencia">
+						<div class="caption">
+							<p><strong>$744 MXN </strong>Service & building</p>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/img5.png" class="img-responsive" alt="imagen de experiencia">
+						<div class="caption">
+							<p><strong>$2445 MXN </strong>Mexico & dining</p>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/img6.png" class="img-responsive" alt="imagen de experiencia">
+						<div class="caption">
+							<p><strong>$25200 MXN </strong>Music & nightlife experience</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--fin de experiencias-->
+		<section><!--inicio de alojamiento-->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h3>Alojamiento</h3>
+					</div>
+				</div>
+				<div id="sliderAlojar" class="slider">
+					<div class="col-xs-4">
+						<img src="img/a1.png" class="img-responsive" alt="imagen de alojamiento">
+						<div class="caption">
+							<p><strong>$1273 MXN </strong>Habitación privada en Valparaíso</p>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star-half-o" aria-hidden="true"></span>
+							<small>182 evaluaciones</small>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/a2.png" class="img-responsive" alt="imagen de alojamiento">
+						<div class="caption">
+							<p><strong>$1655 MXN </strong>Casa/apto. entero en Balian Beach</p>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<small>75 evaluaciones</small>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/a3.png" class="img-responsive" alt="imagen de alojamiento">
+						<div class="caption">
+							<p><strong>$4245 MXN </strong>Casa/apto. entero Fern Forest</p>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<small>266 evaluaciones</small>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/a4.png" class="img-responsive" alt="imagen de alojamiento">
+						<div class="caption">
+							<p><strong>$1804 MXN </strong>Casa/apto. entero en Tricase</p>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<small>61 evaluaciones</small>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/a5.png" class="img-responsive" alt="imagen de alojamiento">
+						<div class="caption">
+							<p><strong>$1804 MXN </strong>Casa/apto. entero en Shangái</p>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<small>145 evaluaciones</small>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/a6.png" class="img-responsive" alt="imagen de alojamiento">
+						<div class="caption">
+							<p><strong>$1655 MXN </strong>Casa/apto. entero París</p>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<span class="fa fa-star" aria-hidden="true"></span>
+							<small>89 evaluaciones</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--fin de alojamiento-->
+		<section><!--inicio de destinos-->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h3>Destinos destacados</h3>
+					</div>
+				</div>
+				<div id="sliderDestino" class="slider">
+					<div class="col-xs-4">
+						<img src="img/d1.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>La habana</strong>								
+						</div>
+					</div>					
+					<div class="col-xs-4">	
+						<img src="img/d2.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>Tokio</strong>								
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/d3.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>París</strong>								
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/d4.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>Miami</strong>								
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/d5.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>Ciudad del Cabo</strong>								
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/d6.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>London</strong>								
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/d7.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>Seúl</strong>								
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="img/d8.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>Los Angeles</strong>									
+						</div>
+					</div>
+					<div class="col-xs-4">	
+						<img src="img/d9.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>Florencia</strong>								
+						</div>
+					</div>
+					<div class="col-xs-4">		
+						<img src="img/d10.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>Detroit</strong>								
+						</div>
+					</div>	
+					<div class="col-xs-4">		
+						<img src="img/d11.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>Nairobi</strong>								
+						</div>
+					</div>
+					<div class="col-xs-4">		
+						<img src="img/d12.png" class="img-responsive" alt="imagen de destino">
+						<div class="caption">
+							<strong>San Francisco</strong>								
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--fin de destinos-->
+		<footer> <!-- inicio de footer -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><!--selector de pais-->
+						<select name="" id=""></select>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs"><!--airbnb-->
+						<h4>Airbnb</h4>
+						<ul>
+							<li><a href="#">Acerca de</a></li>
+							<li><a href="#">Empleo</a></li>
+							<li><a href="#">Prensa</a></li>
+							<li><a href="#">Políticas</a></li>
+							<li><a href="#">Ayuda</a></li>
+							<li><a href="#">Diversidad y sentido de pertenencia</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs"><!--descubre airbnb-->
+						<h4>Descubre Airbnb</h4>
+						<ul>
+							<li><a href="#">Confianza y seguridad</a></li>
+							<li><a href="#">Crédito para viajar</a></li>
+							<li><a href="#">Airbnb Citizen</a></li>
+							<li><a href="#">Viajes de negocios</a></li>
+							<li><a href="#">Guías</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs"><!--hospedar-->
+						<h4>Hospedar</h4>
+						<ul>
+							<li><a href="#">Razones para hospedar</a></li>
+							<li><a href="#">Hospitalidad</a></li>
+							<li><a href="#">Ser un anfitrión responsable</a></li>
+						</ul>
+					</div>			
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6"><!--selector de pais-->
+						<p><img src="img/logo-footer.png" alt="Airbnb logotipo"> &copy; Airbnb, Inc.</p>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 text-right"><!--airbnb-->
+						<p>Términos y Privacidad</p>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs text-right"><!--descubre airbnb-->
+						<p>Mapa del sitio</p>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs text-right"><!--hospedar-->
+						<a href=""><span class="fa fa-facebook"></span></a>
+						<a href=""><span class="fa fa-twitter"></span></a>
+						<a href=""><span class="fa fa-instagram"></span></a>
+					</div>	
+				</div>
+			</div>
+		</footer> <!-- fin de footer -->
 		<script type="text/javascript" src="js/jquery.min.js"></script><!--jquery-->
 		<script type="text/javascript" src="js/bootstrap.min.js"></script><!--js de bootstrap-->
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script><!--jquery ui datepicker-->
+		<script type="text/javascript" src="js/datepicker-es.js"></script> <!--lenguaje de calendario-->
+		<script type="text/javascript" src="js/slick.min.js"></script><!--libreria de slick-->
+				<script type="text/javascript" src="js/slider.js"></script><!--slider-->
+
 		<script type="text/javascript" src="js/main.js"></script> <!--mi codigo-->
+
 	</body>
 </html>

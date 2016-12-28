@@ -1,0 +1,10 @@
+.navbar .navbar-header a.navbar-brand img {
+  max-width: 30%; }
+
+.multi-item-carousel .carousel-inner > .item, .multi-item .carousel-inner > .item {
+  transition: 500ms ease-in-out left; }
+
+.carousel-control.left, .carousel-control.right {
+  background: transparent; }
+
+/*# sourceMappingURL=estilos.css.map */

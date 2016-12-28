@@ -1,0 +1,57 @@
+header{
+	.navbar {
+		.navbar-collapse {
+			.navbar-nav {
+				a{
+					color: #000;
+					font-weight: bold;
+					&:hover{
+						background: transparent;
+					}
+				}
+			}
+		}
+	}
+	.carousel-control {
+		&.left, 
+		&.right {
+			background: transparent;
+		}
+	}
+	#myCarousel {
+		.fill {
+			width: 100%;
+			background-position: center;
+			background-size: cover;
+			padding: 20%;
+		}
+		.banner1{
+			background-image: url("../img/banner1.png");
+		}
+		.banner2{
+			background-image: url("../img/banner2.png");
+		}
+		.banner3{
+			background-image: url("../img/banner3.png");
+		}
+		.banner4{
+			background-image: url("../img/banner4.png");
+		}
+	}
+}
+
+.slider{
+	.slick-prev,
+	.slick-next {
+		position: absolute;
+		top: 40%;
+		cursor: pointer;
+		color: #999;
+	}
+	.slick-prev {
+		left: -1.5%;
+	}
+	.slick-next {
+		right: -1.5%;
+	}
+}

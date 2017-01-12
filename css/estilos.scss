@@ -1,17 +1,40 @@
+$blanco: #fff;
+$negro: #000;
+$gris: #999;
+$verde: #00a699;
+$gris-claro: #eee;
+
+body{
+	font-family: 'Raleway', sans-serif;
+}
+.texto-blanco{
+	color: $blanco;
+}
 header{
+	//estilos de menu
 	.navbar {
 		.navbar-collapse {
 			.navbar-nav {
 				a{
-					color: #000;
-					font-weight: bold;
+					color: $negro;
+					font-weight: 600;
 					&:hover{
 						background: transparent;
 					}
 				}
 			}
-		}
+		}	
 	}
+	//estilos que se agregan al menu cuando se hace sroll
+	.borde{
+		border-right: $gris-claro 2px solid;
+	}
+	.nav-blanco{
+		background-color: $blanco;
+		padding: 1%;
+		border-bottom: $gris-claro 2px solid;
+	}
+	//estilos de carrusel	
 	.carousel-control {
 		&.left, 
 		&.right {
@@ -25,6 +48,7 @@ header{
 			background-size: cover;
 			padding: 20%;
 		}
+		//imagenes de carrusel
 		.banner1{
 			background-image: url("../img/banner1.png");
 		}
@@ -37,16 +61,108 @@ header{
 		.banner4{
 			background-image: url("../img/banner4.png");
 		}
+		//texto dentro del carrusel
+		.carousel-caption{
+			text-align: left;
+			top: 60px;
+			color: $negro;
+			text-shadow: none;
+			h2{
+				font-weight: 900;
+				font-size: 3em;
+				letter-spacing: -1px ;
+				line-height: 56px ;
+				color: #484848;	
+			}
+			.bnt-borde{
+				border-radius: 30px;
+				font-size: 1em;
+				border: $gris 2px solid;
+				background-color: transparent;
+			}
+		}
+		.txt-blanco {
+			color: $blanco;
+		}
 	}
 }
 
+//estilos del formulario
+section#form{
+	margin-top: 3%;
+	label{
+		display: block;
+		font-weight: normal;
+	}
+	.form-group{
+		margin: 2%;
+	}
+	.btn-rosa{
+		background-color: #ff5a5f;
+		color: $blanco;
+		padding: 1% 2%;
+		&:hover{
+			background-color: #ff7e82;
+		}
+	}
+}
+
+input, select{
+	border: none;
+	font-size: 19px;
+	letter-spacing: -.3px;
+	outline: none; //elimina el focus por defecto
+	&:focus {
+		border-bottom:1px solid $verde;
+	}
+}
+
+strong{
+	font-weight: 600;
+}
+
+footer{
+	border-top: $gris-claro 3px solid;
+	select{
+		border: 1px solid #bbb;
+		display: block;
+		margin: 5%;
+		padding: 5%;
+		width: 55%;
+	}
+	h4{
+		font-weight: 600;
+		font-size: 1em;
+	}
+	.list-unstyled{
+		a{
+			color: #888;
+		}
+	}
+	.linea{
+		border-top: $gris-claro 3px solid;
+	}
+	.fa{
+		color: #777;
+		margin-left: 5%;
+		font-size: 1.2em;
+	}
+	p{
+		font-size: 1em;
+	}
+}
+//color de estrellas
+.fa-star, .fa-star-half-o{
+	color: $verde;
+}
+//flechas de navegacion
 .slider{
 	.slick-prev,
 	.slick-next {
 		position: absolute;
 		top: 40%;
 		cursor: pointer;
-		color: #999;
+		color: $gris;
 	}
 	.slick-prev {
 		left: -1.5%;

@@ -1,8 +1,20 @@
+body {
+  font-family: 'Raleway', sans-serif; }
+
+.texto-blanco {
+  color: #fff; }
+
 header .navbar .navbar-collapse .navbar-nav a {
   color: #000;
-  font-weight: bold; }
+  font-weight: 600; }
   header .navbar .navbar-collapse .navbar-nav a:hover {
     background: transparent; }
+header .borde {
+  border-right: #eee 2px solid; }
+header .nav-blanco {
+  background-color: #fff;
+  padding: 1%;
+  border-bottom: #eee 2px solid; }
 header .carousel-control.left, header .carousel-control.right {
   background: transparent; }
 header #myCarousel .fill {
@@ -18,6 +30,74 @@ header #myCarousel .banner3 {
   background-image: url("../img/banner3.png"); }
 header #myCarousel .banner4 {
   background-image: url("../img/banner4.png"); }
+header #myCarousel .carousel-caption {
+  text-align: left;
+  top: 60px;
+  color: #000;
+  text-shadow: none; }
+  header #myCarousel .carousel-caption h2 {
+    font-weight: 900;
+    font-size: 3em;
+    letter-spacing: -1px;
+    line-height: 56px;
+    color: #484848; }
+  header #myCarousel .carousel-caption .bnt-borde {
+    border-radius: 30px;
+    font-size: 1em;
+    border: #999 2px solid;
+    background-color: transparent; }
+header #myCarousel .txt-blanco {
+  color: #fff; }
+
+section#form {
+  margin-top: 3%; }
+  section#form label {
+    display: block;
+    font-weight: normal; }
+  section#form .form-group {
+    margin: 2%; }
+  section#form .btn-rosa {
+    background-color: #ff5a5f;
+    color: #fff;
+    padding: 1% 2%; }
+    section#form .btn-rosa:hover {
+      background-color: #ff7e82; }
+
+input, select {
+  border: none;
+  font-size: 19px;
+  letter-spacing: -.3px;
+  outline: none; }
+  input:focus, select:focus {
+    border-bottom: 1px solid #00a699; }
+
+strong {
+  font-weight: 600; }
+
+footer {
+  border-top: #eee 3px solid; }
+  footer select {
+    border: 1px solid #bbb;
+    display: block;
+    margin: 5%;
+    padding: 5%;
+    width: 55%; }
+  footer h4 {
+    font-weight: 600;
+    font-size: 1em; }
+  footer .list-unstyled a {
+    color: #888; }
+  footer .linea {
+    border-top: #eee 3px solid; }
+  footer .fa {
+    color: #777;
+    margin-left: 5%;
+    font-size: 1.2em; }
+  footer p {
+    font-size: 1em; }
+
+.fa-star, .fa-star-half-o {
+  color: #00a699; }
 
 .slider .slick-prev,
 .slider .slick-next {
